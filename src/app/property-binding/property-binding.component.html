@@ -1,3 +1,7 @@
 <p>property-binding works!</p>
 
-<button mat-button color="primary">By first button</button>
+<button mat-raised-button color={{colorprimary}}>By first button</button>
+<button mat-raised-button [color]="colorwarn">By second button</button>
+
+
+<button mat-raised-button [disabled]="btnDisabled" [color]="colors[idx]">By second button</button>

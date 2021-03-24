@@ -1,0 +1,19 @@
+<p>two-way-data-binding works!</p>
+
+<section>
+    <div>
+        <mat-form-field>
+            <input type="text" matInput placeholder="Enter your name."
+                [(ngModel)]="name1" name="name1">
+        </mat-form-field>
+        <mat-form-field>
+            <input type="text" matInput placeholder="Enter your name."
+                [(ngModel)]="name2" name="name2">
+        </mat-form-field>
+    </div>
+    <div>
+        <p>{{ name1 }}</p>
+        <p>{{ name2 }}</p>
+    </div>
+</section>
+    

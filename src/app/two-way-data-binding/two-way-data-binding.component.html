@@ -16,4 +16,29 @@
         <p>{{ name2 }}</p>
     </div>
 </section>
-    
+
+<section>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="First Name" type="text"
+             name="firstName" [(ngModel)]="client.firstName">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Last Name" type="text"
+             name="lastName" [(ngModel)]="client.lastName">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Address" type="text"
+             name="address" [(ngModel)]="client.address">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Age" type="text"
+             name="age" [(ngModel)]="client.age">
+        </mat-form-field>
+    </form>
+    <div>
+        <p>Name: {{ client.firstName }} {{ client.lastName }}</p>
+        <p>Address: {{ client.address }}</p>
+        <p>Age: {{ client.age }}</p>
+    </div>
+</section>

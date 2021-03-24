@@ -9,3 +9,9 @@ mat-spinner{
 mat-checkbox {
     margin: 10px;
 }
+
+section{
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+

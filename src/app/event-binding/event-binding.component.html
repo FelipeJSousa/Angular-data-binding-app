@@ -1,0 +1,25 @@
+<p>event-binding works!</p>
+
+<section>
+    <div>
+        <button mat-button color="primary" (click)="save()">Console Log</button>
+    </div>
+    <div>
+        <button mat-button color="warn" (click)="dec()">Decrementar Intervalo</button>
+        <button mat-button color="warn" (click)="inc()">{{btnName}}</button>
+        <h1>{{i}}</h1>
+    </div>
+</section>
+
+<section>
+    <div>
+        <button mat-button [disabled]="btnDisabled" color="primary">Botão 1</button>
+        <button mat-button [disabled]="btnDisabled" color="primary">Botão 2</button>
+    </div>
+    <div>
+        <mat-spinner color="accent" [mode]="spinnerMode" [value]="value"></mat-spinner>
+        <button mat-button color="primary" (click)="disableBtn()">Desabilitar</button>
+    </div>
+</section>
+
+

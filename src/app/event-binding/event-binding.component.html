@@ -1,4 +1,13 @@
-<p>event-binding works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>event-binding works!</p>
 
 <section>
     <div>
@@ -22,4 +31,32 @@
     </div>
 </section>
 
+<section class="example-section">
+    <div>
+        <mat-checkbox class="example-margin" (change)="cbtrigger($event.checked)">Check me!</mat-checkbox>
+        <mat-checkbox class="example-margin" [disabled]="cbdisable" (change)="selectTrigger($event.checked)">{{cbcontent}}</mat-checkbox>
+    </div>
+</section>
+
+<section>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Carro Favorito</mat-label>
+            <mat-select [disabled]="selectDisabled" (selectionChange)="selectionChange($event.value)">
+                <mat-option value="1">Volvo</mat-option>
+                <mat-option value="2">Saab</mat-option>
+                <mat-option value="3">Mercedes</mat-option>
+                <mat-option value="4">Audi</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div>
+        <span>Opção selecionada {{selectedOption}}</span>
+    </div>
+</section>
+
+
+
+</body>
+</html>
 

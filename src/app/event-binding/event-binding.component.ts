@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './event-binding.component.html',
   styleUrls: ['./event-binding.component.css']
 })
+
 export class EventBindingComponent implements OnInit {
 
   btnName: string = "Incrementar Intervalo";
@@ -12,6 +13,12 @@ export class EventBindingComponent implements OnInit {
   spinnerMode: string = "determinate";
   value = "0";
   btnDisabled = false;
+
+  cbdisable = true;
+  cbcontent: string = "Desabilitado" ;
+
+  selectDisabled= true;
+  selectedOption = 0;
   constructor() { }
 
   ngOnInit(): void {
@@ -44,4 +51,19 @@ export class EventBindingComponent implements OnInit {
       this.btnDisabled = false;
     }, this.i*1000);
   }
+
+  cbtrigger(marcacao: boolean){
+    this.cbdisable = !marcacao;
+    marcacao == false ? this.cbcontent = "Desabilitado": this.cbcontent = "Habilitar select";
+  }
+  
+  selectTrigger(marcacao: boolean){
+    this.selectDisabled = !marcacao;
+  }
+
+  selectionChange(value){
+    console.log(value)
+    this.selectedOption = value;
+  }
+
 }

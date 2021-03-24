@@ -1,7 +1,11 @@
-div{
+div {
     text-align: center;
 }
 
 mat-spinner{
     margin: 0px auto;
+}
+
+mat-checkbox {
+    margin: 10px;
 }
